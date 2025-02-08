@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
     },
     firstName: String,
     lastName: String,
-    username: String,
+    username: { type: String, unique: true, sparse: true },
     email: { type: String, unique: false },
     gender: String,
     age: Number,
